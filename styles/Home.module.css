@@ -8,6 +8,7 @@
 
 
 .main {
+  position: relative;
   min-height: 100vh;
   padding: 4rem 0;
   flex: 1;
@@ -47,7 +48,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .title,
@@ -59,6 +60,37 @@
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
+}
+
+.cssBtn {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background-size: 120% auto;
+  background-image: linear-gradient(315deg, #000428 0%, #004e92 75%);
+}
+.cssBtn:hover {
+  background-position: right center;
+}
+.cssBtn:active {
+  top: 2px;
+}
+
+.btn {
+  border: 0;
+
+  padding: 1rem 2rem;
+  background: deeppink;
+  color: #fafafa;
 }
 
 .code {
@@ -87,13 +119,11 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
   border-color: #0070f3;
 }
 
@@ -104,13 +134,19 @@
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1em;
   line-height: 1.5;
 }
 
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+.statusModal {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }
 
 @media (max-width: 600px) {
