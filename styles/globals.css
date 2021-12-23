@@ -1,16 +1,39 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.statusModal {
+    background-color: deeppink;
+    color: #fafafa;
+    padding: 1rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.css-button-gradient--8 {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-size: 120% auto;
+    background-image: linear-gradient(315deg, #7b4397 0%, #dc2430 75%);
+}
+.css-button-gradient--8:hover {
+    background-position: right center;
+}
+.css-button-gradient--8:active {
+    top: 2px;
 }
 
-* {
-  box-sizing: border-box;
+input:hover {
+    cursor: pointer;
 }

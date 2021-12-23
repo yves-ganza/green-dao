@@ -4,8 +4,6 @@
 const sdk = require('./1-init-sdk')
 const {readFileSync} = require('fs')
 
-console.log(__dirname)
-
 const bundleDrop = sdk.getBundleDropModule('0x99C00b0225ba5f1b675f64A2BF87Cea97538dcCC');
 
 const createMembershipNft = async () => {

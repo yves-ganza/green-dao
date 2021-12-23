@@ -10,9 +10,12 @@ function MyApp({ Component, pageProps }) {
   }
 
   return(
-      <ThirdwebWeb3Provider connectors={connectors} supportedChainIds={chains}>
-        <Component {...pageProps} />
-      </ThirdwebWeb3Provider>
+      <div className='relative flex flex-col items-center bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 min-h-screen font-mono overflow-x-hidden'>
+          <ThirdwebWeb3Provider connectors={connectors} supportedChainIds={chains}>
+              <Component {...pageProps} />
+          </ThirdwebWeb3Provider>
+      </div>
+
   )
 }
 

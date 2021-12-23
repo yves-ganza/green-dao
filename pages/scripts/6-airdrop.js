@@ -14,7 +14,7 @@ const airDrop = async () => {
         }
 
         const targets = allAddresses.map(address => {
-            const amount = 1
+            const amount = Math.floor(((Math.random() * 5000) + 1000))
             console.log('👨🏾‍💻 Going to airdrop exactly %s token to %s',amount, address)
             return{
                 address,
