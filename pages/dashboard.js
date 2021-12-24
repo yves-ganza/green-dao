@@ -40,12 +40,15 @@ const Dashboard = () => {
     }, [])
 
     return (
-        <div className={'p-4'}>
-            <header className={'p-4 pt-12 text-center'}>
-                <h1 className={'text-gray-100 text-2xl font-semibold'}>🌍Member Dashboard</h1>
+        <div className={'p-4 lg:grid lg:grid-cols-5 lg:grid-rows-6 lg:max-h-screen md:pl-8 xl:pl-12'}>
+            <header className={'p-4 mb-12 lg:mb-0 lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-5 mx-auto text-center flex items-center justify-center'}>
+                <h1 className={'text-4xl text-gray-100 font-bold'}>
+                    <span className={'block md:inline animate-pulse text-9xl text-center'}>🌍</span>
+                    <span className={'ml-1 lg:ml-5 text-center'}>GreenDAO</span>
+                </h1>
             </header>
-            <aside className=''>
-                <section className='bg-white p-1 shadow rounded flex flex-col justify-center max-w-96 p-4'>
+            <aside className='lg:row-start-3 lg:row-end-5 lg:col-start-1 col-end-3 flex items-center justify-center'>
+                <section className='bg-white shadow rounded flex flex-col justify-center w-full  max-w-96 px-4'>
                     <h2 className={'text-gray-500 text-xl text-center py-4'}>Your Wallet</h2>
                     <p className={'pb-4 text-md'}>Address: <span className={'block pl-4 overflow-x-auto whitespace-nowrap'}>{address}</span></p>
                     <p className={'pb-4 text-md whitespace-nowrap'}>Balance: <span className={'block pl-4 overflow-x-auto whitespace-nowrap'}>{balance?.formatted} ETH</span></p>
@@ -57,11 +60,11 @@ const Dashboard = () => {
                     </div>
                 </section>
             </aside>
-            <main>
+            <main className={'lg:row-start-3 lg:row-end-7 lg:col-start-3 lg:col-end-6 lg:ml-24 lg:border-l-1'}>
                 <Proposals />
             </main>
-            <aside>
-                <section className='flex flex-col justify-center max-w-96 p-4'>
+            <aside className={'lg:row-start-5 lg:row-end-7 lg:col-start-1 lg:col-end-3'}>
+                <section className='flex flex-col justify-center max-w-96'>
                     <h2 className={'text-gray-100 text-xl text-center py-4'}>Community members</h2>
                     <table className={'w-full'}>
                         <tbody>

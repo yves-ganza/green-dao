@@ -1,4 +1,4 @@
-import {useWeb3} from '@3rdweb/hooks'
+import {useWeb3, useSwitchNetwork} from '@3rdweb/hooks'
 import {ThirdwebSDK} from "@3rdweb/sdk"
 import React, {useEffect, useState} from "react"
 import {ethers} from "ethers"
@@ -22,6 +22,7 @@ export default function Home() {
     const [status, setStatus] = useState('')
     const [members, setMembers] = useState([])
     const signer = provider?.getSigner() || undefined
+    const {switchNetwork} = useSwitchNetwork()
 
     const handleConnect = () => {
         try {
@@ -103,6 +104,7 @@ export default function Home() {
         init()
     }, [address])
 
+
     if(!address){
         return(
             <div className={'absolute inset-0 bg-none flex items-center justify-center'}>
@@ -111,7 +113,18 @@ export default function Home() {
                     <button className={'py-4 px-5 m-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded'} onClick={handleConnect}>Connect Wallet</button>
                 </section>
             </div>
+        )
+    }
 
+    if(chainId != 4){
+        return (
+            <div className={'absolute inset-0 bg-none flex items-center justify-center'}>
+                <section className={'bg-gray-800 text-white flex flex-col justify-center items-center max-w-96 rounded shadow mx-auto'}>
+                    <h1 className={'text-xl p-4'}>👋Welcome to 🌍GreenDAO </h1>
+                    <p>Please connect to the Rinkeby network to access this DApp</p>
+                    <button className={'py-4 px-5 m-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded'} onClick={() => switchNetwork(4)}>Switch Network</button>
+                </section>
+            </div>
         )
     }
 
