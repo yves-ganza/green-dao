@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-package-lock.json
 
 # testing
 /coverage
@@ -14,7 +13,7 @@ package-lock.json
 /out/
 
 # Dev scripts
-/pages/scripts
+/pages/scripts/
 
 # production
 /build
