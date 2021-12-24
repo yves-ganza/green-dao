@@ -14,15 +14,7 @@ package-lock.json
 /out/
 
 # Dev scripts
-/pages/scripts/2-deploy-drop.js
-/pages/scripts/3-create-nft.js
-/pages/scripts/4-set-claim-condition.js
-/pages/scripts/5-create-token.js
-/pages/scripts/6-airdrop.js
-/pages/scripts/7-deploy-vote-module.js
-/pages/scripts/8-supply-vote-power.js
-/pages/scripts/9-create-proposal.js
-/pages/scripts/10-revoke-roles.js
+/pages/scripts
 
 # production
 /build
