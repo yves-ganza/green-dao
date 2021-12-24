@@ -64,8 +64,8 @@ const Dashboard = () => {
                 <Proposals />
             </main>
             <aside className={'lg:row-start-5 lg:row-end-7 lg:col-start-1 lg:col-end-3'}>
-                <section className='flex flex-col justify-center max-w-96'>
-                    <h2 className={'text-gray-100 text-xl text-center py-4'}>Community members</h2>
+                <section className='flex flex-col justify-center max-w-96 pt-12'>
+                    <h2 className={'text-gray-100 mb-4 text-2xl font-semibold text-center'}>Community members</h2>
                     <table className={'w-full'}>
                         <tbody>
                         {
